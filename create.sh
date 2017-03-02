@@ -104,5 +104,5 @@ echo "$BASHRC" >> "$NORMAL_HOME"/.bashrc
 
 echo "Running jupyter in screen"
 
-sudo -u "$NORMAL_USER" screen -m -d -S "jupyter" bash -c "source $PWD/env/bin/activate ; jupyter-notebook --ip=0.0.0.0\
- --port=8000 --no-browser --NotebookApp.token=''"
+sudo -u "$NORMAL_USER" screen -m -d -S "jupyter" bash -c "source  $PWD/env/bin/activate ; export THEANO_FLAGS='floatX=float32,device=gpu0';\
+jupyter-notebook --ip=0.0.0.0 --port=8000 --no-browser --NotebookApp.token=''"
