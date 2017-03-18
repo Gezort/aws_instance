@@ -47,7 +47,7 @@ echo "Installing cuda"
 # CUDA
 apt-get update && apt-get upgrade -y && apt-get install -y build-essential pkg-config linux-image-generic linux-image-extra-virtual linux-source linux-headers-generic
 
-wget 'http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_8.0.61-1_amd64.deb'
+wget 'http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_8.0.44-1_amd64.deb'
 dpkg -i cuda-repo-ubuntu1604_8.0.44-1_amd64.deb
 apt-get update && sudo apt-get install cuda -y
 sudo modprobe nvidia
